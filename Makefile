@@ -12,4 +12,4 @@ vpath source
 
 web:
 	@make html
-	@cp -r build/html/. .
+	@cp -r build/* .
