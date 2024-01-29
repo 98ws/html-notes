@@ -23,6 +23,7 @@ jobs:
     - name: Build HTML
       run:
         cd docs
+        
         make html
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
