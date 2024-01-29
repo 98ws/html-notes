@@ -16,7 +16,7 @@ jobs:
     - name: Install Latest Sphinx
       run: |
         python -m pip install --upgrade pip
-        pip install --upgrade --reinstall sphinx
+        pip install --upgrade --force-reinstall sphinx
     - name: Install Dependencies
       run: |
         pip install sphinx-rtd-theme
