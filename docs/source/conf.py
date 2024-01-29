@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = '前端学习笔记'
+project = '个人学习笔记'
 copyright = ''
 author = '王顺'
 release = '2024.01'
