@@ -15,7 +15,7 @@ jobs:
         python-version: 3.8
     - name: Install Dependencies
       run:
-        pip install sphinx-rtd-theme
+        pip install sphinxawesome-theme
     - name: Build HTML
       run: |
         cd docs
