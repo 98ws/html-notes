@@ -47,7 +47,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <p class="caption" role="heading"><span class="caption-text">目录</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. HTML</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. HTML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1.1. 图像标签</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.2. 链接标签</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.2.1. 外部链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.2.2. 内部链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">1.2.3. 邮件链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qq">1.2.4. QQ 链接</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="cmd.html">2. 命令行</a></li>
 </ul>
 
@@ -77,7 +87,7 @@
              
   <section id="html">
 <h1><span class="section-number">1. </span>HTML<a class="headerlink" href="#html" title="此标题的永久链接"></a></h1>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">W3C<span class="colon">:</span></dt>
 <dd class="field-odd"><p>World WIde Web Consortium，国际标准化组织，制定包括 HTML、CSS、XML 等在内的 web 规范和指南。</p>
 </dd>
@@ -87,9 +97,14 @@
 <dt class="field-odd">非自闭标签<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Non-self-closing Tag，又称为开放标签，配对出现。例：<code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/head&gt;</span></code></p>
 </dd>
+<dt class="field-even">元素<span class="colon">:</span></dt>
+<dd class="field-even"><p>分为块元素和行内元素。</p>
+<p>块元素为无论内容多少，该元素独占一行（如段落标签 <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code> 和标题标签 <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h1&gt;</span></code>）。</p>
+<p>行内元素指一行内可以容纳多个元素（如粗体 <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/strong&gt;</span></code> 和斜体 <code class="docutils literal notranslate"><span class="pre">&lt;em&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/em&gt;</span></code> 可以同时放在一行之中）。</p>
+</dd>
 </dl>
-<table class="docutils align-left" id="id1">
-<caption><span class="caption-text">HTML 语法</span><a class="headerlink" href="#id1" title="此表格的永久链接"></a></caption>
+<table class="docutils align-left" id="id7">
+<caption><span class="caption-text">HTML 语法</span><a class="headerlink" href="#id7" title="此表格的永久链接"></a></caption>
 <colgroup>
 <col style="width: 30.0%" />
 <col style="width: 70.0%" />
@@ -143,6 +158,69 @@
 </ol>
 </div></blockquote>
 </div>
+<section id="id1">
+<h2><span class="section-number">1.1. </span>图像标签<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>src：图像路径，<strong>必需</strong>。</p></li>
+<li><p>alt：图像无法显示时的替代文字，<strong>必需</strong>。</p></li>
+<li><p>title：鼠标悬停在图像上时的提示文字。</p></li>
+<li><p>width：宽度。</p></li>
+<li><p>height：高度。</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2><span class="section-number">1.2. </span>链接标签<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<section id="id3">
+<h3><span class="section-number">1.2.1. </span>外部链接<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="n">target</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="o">&gt;</span> <span class="o">...</span> <span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p>href：跳转的目标链接。</p></li>
+<li><p>target：以何种方式打开。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_blank</span></code> 空白页打开。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_self</span></code> 当前页打开（默认）。</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>... 中为跳转处的内容，可以是文字和图像。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3><span class="section-number">1.2.2. </span>内部链接<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h3>
+<p>锚点处：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="o">&gt;</span> <span class="o">...</span> <span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>跳转处：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;#(name)&quot;</span> <span class="o">...</span> <span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>name：锚点的标签 (tag)。</p></li>
+<li><p>href：填写 # + tag。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p># 号用于定位至锚点链接具体位置（在 HTML 网址栏中非常常见）。</p>
+</div>
+</section>
+<section id="id5">
+<h3><span class="section-number">1.2.3. </span>邮件链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;mailto:_____&quot;</span><span class="o">&gt;</span> <span class="o">...</span> <span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="qq">
+<h3><span class="section-number">1.2.4. </span>QQ 链接<a class="headerlink" href="#qq" title="此标题的永久链接"></a></h3>
+<p>在 <a class="reference external" href="https://qidian.qq.com/apply.html">QQ 推广官网</a>输入自己的 QQ 号，直接复制生成的代码即可。</p>
+</section>
+</section>
 </section>
 
 
