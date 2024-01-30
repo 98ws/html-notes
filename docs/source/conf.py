@@ -14,7 +14,7 @@ release = '2024.01'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions += [
+extension = [
    "sphinxawesome.highlighting",
    # To help you with the upgrade to version 5:
    # "sphinxawesome.deprecated",
