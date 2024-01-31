@@ -64,7 +64,7 @@ HTML
 
 .. code::
 
-   <img src="" alt="" title="" width="" height=""/>
+           <img src="" alt="" title="" width="" height=""/>
 
 - src：图像路径，\ **必需**\。
 
@@ -85,7 +85,7 @@ HTML
 
 .. code::
 
-   <a href="" target=""> ... </a>
+           <a href="" target=""> ... </a>
 
 - href：跳转的目标链接。
 
@@ -105,13 +105,13 @@ HTML
 
 .. code::
 
-   <a name=""> ... </a>
+           <a name=""> ... </a>
 
 跳转处：
 
 .. code::
 
-   <a href="#(name)" ... </a>
+           <a href="#(name)" ... </a>
 
 - name：锚点的标签 (tag)。
 
@@ -128,7 +128,7 @@ HTML
 
 .. code::
 
-   <a href="mailto:_____"> ... </a>
+           <a href="mailto:_____"> ... </a>
 
 
 QQ 链接
