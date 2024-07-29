@@ -34,7 +34,7 @@ Day 1
 
   .. code::
 
-       4 + 2 // + 是操作符
+       4 + 2 # + 是操作符
 
 * Variable
 
@@ -52,8 +52,8 @@ Day 1
 
   .. code::
 
-     spam = 42 // 这是一个赋值语句
-     // = 是赋值操作符 (assignment operator)
+     spam = 42 # 这是一个赋值语句
+     # = 是赋值操作符 (assignment operator)
 
 * Overwriting
 
