@@ -19,12 +19,18 @@ extension = [
    # To help you with the upgrade to version 5:
    # "sphinxawesome.deprecated",
 ]
-
+needs_sphinx = '' # minimum supported version of Sphinx required for this project
 templates_path = ['_templates']
 exclude_patterns = []
 
 language = 'zh'
 
+numfig = True
+numfig_format = {
+        'code-block': '代码 %s',
+        'figure': '图 %s',
+        'table': '表 %s',
+        }
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_favicon = 'media/favicon.ico'
