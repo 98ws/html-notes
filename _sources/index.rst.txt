@@ -8,3 +8,4 @@
 
    html.rst
    cmd.rst
+   python.rst
