@@ -7,16 +7,15 @@
 <meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>2. 命令行 | 学习笔记 2024.01 文档</title>
-<meta content="2. 命令行 | 学习笔记 2024.01 文档" property="og:title"/>
-<meta content="2. 命令行 | 学习笔记 2024.01 文档" name="twitter:title"/>
+<title>4. IC | 学习笔记 2024.01 文档</title>
+<meta content="4. IC | 学习笔记 2024.01 文档" property="og:title"/>
+<meta content="4. IC | 学习笔记 2024.01 文档" name="twitter:title"/>
 <link href="_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
 <link href="_static/theme.css?v=ecdfb4fc" rel="stylesheet" type="text/css"/>
 <link href="_static/favicon.ico" rel="icon"/>
 <link href="search.html" rel="search" title="搜索"/>
 <link href="genindex.html" rel="index" title="索引"/>
-<link href="python.html" rel="next" title="3. Python 学习笔记"/>
-<link href="html.html" rel="prev" title="1. HTML"/>
+<link href="python.html" rel="prev" title="3. Python 学习笔记"/>
 <script>
     <!-- Prevent Flash of wrong theme -->
       const userPreference = localStorage.getItem('darkMode');
@@ -72,9 +71,9 @@
 <p class="caption" role="heading"><span class="caption-text">目录</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="html.html">1. HTML</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. 命令行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmd.html">2. 命令行</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">3. Python 学习笔记</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ic.html">4. IC</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. IC</a></li>
 </ul>
 </nav>
 </div>
@@ -94,243 +93,87 @@
 <path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
 </svg>
 </a>
-<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap"><span class="section-number">2. </span>命令行</span>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap"><span class="section-number">4. </span>IC</span>
 </nav>
 <div id="content" role="main">
+<section id="ic">
+<h1><span class="section-number">4. </span>IC<a class="headerlink" href="#ic" title="此标题的永久链接">¶</a></h1>
+<p>1958年，基尔比 (Kilby) 完成移相振荡器和触发器的制造和演示，标志集成电路诞生。</p>
+<p>1959年，德州仪器申请第一个集成电路专利并公布发明。</p>
+<p>集成电路信息获取（图像传感器 Imaging sensor 和 微机电系统 Micro-electro-mechanical system, MEMS）：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>图像传感器：CCD（Charge coupled device，电荷耦合器件）——CMOS（有源像素传感器）</p></li>
+<li><p>微机电系统：集成速度、温度、湿度、高度、声音、压力、方位、气体等更多的传感器系统，是人们用过直觉感受到的模拟信息（快慢、冷热、干湿、力度）能够精确的数字化。</p></li>
+</ul>
+</div></blockquote>
+<p>半导体信息存储：</p>
+<blockquote>
+<div><p>纸张——机电装置（继电器）——磁性介质（磁带）——金属氧化物半导体（MOS）</p>
+<p>1967年，发明 DRAM（Dynamic Random Access Memory，动态随机存取存储器）和 NVSM（Non-volatile Semiconductor Memory, 非易失性半导体存储器）</p>
+<p>1969年，Intel发明SRAM（静态随机存取存储器），开创半导体存储器先河）</p>
+<p>1984年，日本东芝开发闪速存储器（Flash memory）。</p>
+<p>DRAM 保存数据的时间很短，需要定时刷新，一般作为内存。快闪存储可以长期保存数据，一般作为外存。</p>
+<p>1970年，Intel 的 1Kbit MOS DRAM 商品化，半导体存储器取代了磁性存储</p>
+</div></blockquote>
+<p>半导体信息处理：</p>
+<blockquote>
+<div><p>1971年Intel 发明中央处理器(Central Processing Unit，CPU）。微处理器(Microprocessor Unit，MPU）成为所有电子设备的核心部件。</p>
+</div></blockquote>
+<p>Fabless：无生产线设计企业</p>
+<p>IDM：集成器件制造商(Integrated Device Manufacturer）。传统为IDM模式，后向IC设计、制造、封测相对分离的模式转化（20C80S）。</p>
+<p>IP：知识产权电路模块厂商（Intellectual property)。是一种经过工艺验证、可嵌入芯片的、设计成熟的模块。分为软核(Soft Core)、固核(Firm Core)、硬核(Hard Core)。来源包括芯片设计公司、Foundry、EDA厂商、专业IP公司（如ARM）和设计服务公司。</p>
+<p>EDA：提供设计工具。</p>
+<p>Foundry：圆片代工厂，为设计公司提供芯片制造代工服务。分为纯代工厂和部分IDM厂商兼做代工两种模式。最著名的是台积电 TSMC。全球代工业务的高潮开始于21世纪</p>
+<p>封测代工公司：主要为fabless和IDM服务。</p>
+<p>材料和专用设备公司：为IDM、Foundry等芯片制造企业提供所需要的材料和设备。</p>
+<p>集成电路主要产品：专用标准产品、微处理器、存储器、专用集成电路、模拟电路、通用逻辑电路。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>专用标准产品 ASSP Application Specific Standard Parts</p></li>
+<li><p>微处理器 MPU Microprocessor Unit</p></li>
+<li><p>存储器 Memory</p></li>
+<li><p>专用集成电路 ASIC Application Specific Integrated Circuit</p></li>
+<li><p>模拟电路 Analog Circuit</p></li>
+<li><p>通用逻辑电路 Logical Circuit</p></li>
+</ul>
+</div></blockquote>
 <section id="id1">
-<h1><span class="section-number">2. </span>命令行<a class="headerlink" href="#id1" title="此标题的永久链接">¶</a></h1>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p>ls</p></td>
-<td><p>列出当前目录的内容</p></td>
-</tr>
-<tr class="row-even"><td><p>ls --help</p></td>
-<td><p>获得帮助</p></td>
-</tr>
-<tr class="row-odd"><td><p>ls -a或la</p></td>
-<td><p>列出当前目录的所有内容</p></td>
-</tr>
-<tr class="row-even"><td><p>Ls -l 或 ll</p></td>
-<td><p>以长格式显
-示文件和目录信息，包括权限、所有者、大小、创建时间等。</p></td>
-</tr>
-<tr class="row-odd"><td><p>cd
-&lt;targetdir&gt;</p></td>
-<td><p>切换目录</p></td>
-</tr>
-<tr class="row-even"><td><p>cd
-&lt;abspath&gt;</p></td>
-<td><p>切换目录（输入绝对路径）</p></td>
-</tr>
-<tr class="row-odd"><td><p>cd</p></td>
-<td><p>切换至home目录</p></td>
-</tr>
-<tr class="row-even"><td><p>cd ..</p></td>
-<td><p>切换至上一层目录</p></td>
-</tr>
-<tr class="row-odd"><td><p>cd -</p></td>
-<td><p>切换至上一个目录</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p>make</p></td>
-<td><p>命令</p></td>
-</tr>
-<tr class="row-even"><td><p>make</p></td>
-<td><p>查看支持的生成格式等</p></td>
-</tr>
-<tr class="row-odd"><td><p>make html</p></td>
-<td><p>构建HTML网页</p></td>
-</tr>
-<tr class="row-even"><td><p>make pdf</p></td>
-<td><p>构建PDF</p></td>
-</tr>
-<tr class="row-odd"><td><p>make clean</p></td>
-<td><p>删除 build 目录中的内容</p></td>
-</tr>
-<tr class="row-even"><td><p>mkdir &lt;dirname&gt;</p></td>
-<td><p>创建目录</p></td>
-</tr>
-<tr class="row-odd"><td><p>mkdir -p test1/test2/test3/test4</p></td>
-<td><p>递归创建多层目录</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p>rm &lt;file&gt;</p></td>
-<td><p>删除文件、目录</p></td>
-</tr>
-<tr class="row-even"><td><p>rm -r &lt;dirname&gt;</p></td>
-<td><p>递归删除目录（较危险）</p></td>
-</tr>
-<tr class="row-odd"><td><p>rm -i</p></td>
-<td><p>删除前确认</p></td>
-</tr>
-<tr class="row-even"><td><p>rm -f</p></td>
-<td><p>强制删除，不会出现警告</p></td>
-</tr>
-<tr class="row-odd"><td><p>rmdir</p></td>
-<td><p>删除空目录</p></td>
-</tr>
-<tr class="row-even"><td><p>rm --help</p></td>
-<td><p>获得帮助</p></td>
-</tr>
-<tr class="row-odd"><td><p>cp &lt;sourcefile&gt;
-&lt;targetfile&gt;</p></td>
-<td><p>复制文件</p></td>
-</tr>
-<tr class="row-even"><td><p>cp &lt;sourcefile&gt; .</p></td>
-<td><p>复制源文件至当前目录，命名不变</p></td>
-</tr>
-<tr class="row-odd"><td><p>cp -r &lt;sourcedir&gt;
-&lt;targetdir&gt;</p></td>
-<td><p>复制目录、文件夹（-r表递归）</p></td>
-</tr>
-<tr class="row-even"><td><p>cp-pr ~他人/文件夹
-自己文件夹</p></td>
-<td><p>例子：cp-pr ~xuqw/char char</p></td>
-</tr>
-<tr class="row-odd"><td><p>mv &lt;targetfile&gt;
-&lt;targetdir&gt;</p></td>
-<td><p>移动目标文件</p></td>
-</tr>
-<tr class="row-even"><td><p>mv &lt;dirname&gt; &lt;dirname&gt;</p></td>
-<td><p>目录更名字</p></td>
-</tr>
-<tr class="row-odd"><td><p>pwd</p></td>
-<td><p>打印当前目录的绝对路径</p></td>
-</tr>
-<tr class="row-even"><td><p>man &lt;command&gt;</p></td>
-<td><p>显示命令的手册页面 （man
-cp查看如何使用复制）</p></td>
-</tr>
-<tr class="row-odd"><td><p>ln f1 f2</p></td>
-<td><p>硬链接（f2是f1的硬连接）</p></td>
-</tr>
-<tr class="row-even"><td><p>ln -s f1 f3</p></td>
-<td><p>软连接（f3是f1的快捷方式）</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p>svn co &lt;target&gt;</p></td>
-<td><p>取出目标文件（夹）、图片</p></td>
-</tr>
-<tr class="row-even"><td><p>svn ci &lt;targetfile&gt;</p></td>
-<td><p>提交目标文件（夹）、图片</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn co
-<a class="reference external" href="http://192.168.1.100">http://192.168.1.100</a>/项目名/</p></td>
-<td><p>取出文件</p></td>
-</tr>
-<tr class="row-even"><td><p>svn status</p></td>
-<td><p>查看状态 M修改</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn add &lt;target&gt;</p></td>
-<td><p>新增目标文件（夹）、图片
-,属性从?变为A</p></td>
-</tr>
-<tr class="row-even"><td><p>svn proplist &lt;targetfile&gt; -
-svn pl</p></td>
-<td><p>显示文档属性</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn pd &lt;property&gt; &lt;targetfile&gt;</p></td>
-<td><p>删除文档属性 propdel</p></td>
-</tr>
-<tr class="row-even"><td><p>svn ps svn:eol-style LF
-&lt;targetfile&gt;</p></td>
-<td><p>设置文档属性 propset</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn del &lt;target&gt;</p></td>
-<td><p>删除文档</p></td>
-</tr>
-<tr class="row-even"><td><p>svn update</p></td>
-<td><p>更新至库里最新版本</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn ci后写日志、 esc、:wq</p></td>
-<td><p>写完日志后上传文档</p></td>
-</tr>
-<tr class="row-even"><td><p>svn log</p></td>
-<td><p>查log记录</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn del &lt;targetfile&gt;</p></td>
-<td><p>删除本地文件</p></td>
-</tr>
-<tr class="row-even"><td><p>svn ci &lt;已删除文件名&gt;</p></td>
-<td><p>从库里删除文件</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn-commit.tmp</p></td>
-<td><p>提交失败的log</p></td>
-</tr>
-<tr class="row-even"><td><p>!$</p></td>
-<td><p>上一个命令行的最后一个文件</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn status|grep -v ^\?</p></td>
-<td><p>不显示？status的文件</p></td>
-</tr>
-<tr class="row-even"><td><p>sdf</p></td>
-<td><p>对比库和本地文件差别</p></td>
-</tr>
-<tr class="row-odd"><td><p>-r 上箭头</p></td>
-<td><p>显示添加失败的过往log</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p>lsb-release -a</p></td>
-<td><p>查看a120\a178等系统的信息</p></td>
-</tr>
-<tr class="row-even"><td><p>修改tex文件后生成pdf</p></td>
-<td><p>输入命令行 xelatex &lt;文件名.tex&gt; -s -o
-&lt;文件名.pdf&gt; -s代表standalone;-o代表output</p></td>
-</tr>
-<tr class="row-odd"><td><p>输入一小半+tab键</p></td>
-<td><p>自动补充</p></td>
-</tr>
-<tr class="row-even"><td><p>gvim &lt;文件名&gt;</p></td>
-<td><p>把文件用vim打开</p></td>
-</tr>
-<tr class="row-odd"><td><p>gvim .zshrc</p></td>
-<td><p>修改alias</p></td>
-</tr>
-<tr class="row-even"><td><p>vim</p></td>
-<td><p>在putty里面编辑</p></td>
-</tr>
-<tr class="row-odd"><td><p>:syn off</p></td>
-<td><p>关闭语法高亮</p></td>
-</tr>
-<tr class="row-even"><td><p>:syn on</p></td>
-<td><p>打开语法高亮</p></td>
-</tr>
-<tr class="row-odd"><td><p>gvim ~/.zshrc</p></td>
-<td><p>打开alias设置文件</p></td>
-</tr>
-<tr class="row-even"><td><p>gvim ~/.vimrc</p></td>
-<td><p>打开快捷键、配置文件</p></td>
-</tr>
-<tr class="row-odd"><td><p>fc-list :lang=zh
-|more</p></td>
-<td><p>显示服务器安装的字体</p></td>
-</tr>
-<tr class="row-even"><td><p>pip list |grep svg</p></td>
-<td><p>显示带有svg的文件
-（如sphinxcontrib-svg2pdfconverter)</p></td>
-</tr>
-<tr class="row-odd"><td><p>svn st | grep "^\!"
-| awk '{print $2}' |
-xargs svn delete</p></td>
-<td><p>SVN批量删除状态为！的图片</p></td>
-</tr>
-</tbody>
-</table>
-<p>啊啊啊啊啊啊啊好想下班</p>
+<h2><span class="section-number">4.1. </span>产业结构变迁<a class="headerlink" href="#id1" title="此标题的永久链接" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#id1'">¶</a></h2>
+<p>1960-1967：</p>
+<blockquote>
+<div><p>集成电路尚未形成独立产业，生产和应用的厂商全部为电子系统厂商（德州仪器、仙童、惠普等）。</p>
+</div></blockquote>
+<p>1968-1969：</p>
+<blockquote>
+<div><p>Intel 和 AMD 公司成立。开始独立于电子系统公司，仅供应通用集成电路产品。自行设计、加工、封装、测试和销售。这种模式属于 IDM（集成器件制造商）。至1990年，IDM销售额占世界IC市场80%。</p>
+</div></blockquote>
+<p>1961-1978：</p>
+<blockquote>
+<div><p>从效益效率方面考虑，部分厂商将封装、测试等后工序的工作进行外包，或转移至发展中国家。1961年美国仙童半导体在香港建立封装厂。至1978年美国 IC 已有80%转移到海外进行封装。</p>
+</div></blockquote>
+<p>1981-1983：</p>
+<blockquote>
+<div><p>IC 设计从手工设计进入到计算机辅助设计。一批EDA厂商出现。Mentor于1981年成立，Cadence于1983年成立。IC 设计开始从 IDM 中分离。1983年起，一批 Fabless 企业诞生(Altera; Syntek; Cirrus Logic; Xilinx; Qualcomm; ATI）。</p>
+</div></blockquote>
+<p>1987：</p>
+<blockquote>
+<div><p>台积电 TSMC 成立，开创专注制造服务的 Foundry 模式。</p>
+</div></blockquote>
+<p>1990:</p>
+<blockquote>
+<div><p>完全不生产产品的 IP 供应商叫做 Chipless。最早提供 IP 的 chipless 厂商是 ARM(Advanced RISC Machines）,于 1990 年创立。</p>
+</div></blockquote>
+<p>看到1.4.5</p>
 </section>
-</div></div>
+</section>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<ul>
+<li><a :data-current="activeSection === '#id1'" class="reference internal" href="#id1">4.1. 产业结构变迁</a></li>
+</ul>
+</div>
+</aside>
 </main>
 </div>
 </div><footer class="py-6 border-t border-border md:py-0">
