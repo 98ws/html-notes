@@ -10,3 +10,4 @@
    cmd.rst
    python.rst
    ic.rst
+   glossary.rst

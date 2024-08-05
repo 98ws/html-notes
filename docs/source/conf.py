@@ -34,6 +34,6 @@ numfig_format = {
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_favicon = 'media/favicon.ico'
-html_theme = 'sphinxawesome_theme'
+html_theme = 'alabaster' #sphinxawesome_theme
 html_static_path = ['_static']
 
