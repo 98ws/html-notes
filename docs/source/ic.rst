@@ -192,13 +192,13 @@ IP 产业重视生态系统的建立，仅仅提供单一 IP 核产品的公司�
 主要划分为锗zhe/硅基材料工艺、化合物材料工艺及其他工艺。当器件特征尺寸发展至20nm以下时，Intel最早采用的 FinFET和IBM最先提出的 FD-SOI 技术成了新解决方案。
 
 .. figure:: meida/ic_1.png
-    :width: auto
+    :width: 70%
 
     集成电路产品按工艺分类
 
 
 .. figure:: meida/ic_2.png
-    :width: auto
+    :width: 70%
 
     集成电路产品按功能分类
 
@@ -213,7 +213,7 @@ IP 产业重视生态系统的建立，仅仅提供单一 IP 核产品的公司�
 数字集成电路：利用晶体管的开关特性来实现信息的处理和传输。
 
 .. figure:: meida/ic_3.png
-    :width: auto
+    :width: 70%
 
     简化的物联网集成电路系统功能结构图
 
