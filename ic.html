@@ -181,16 +181,16 @@
 <section id="id6">
 <h2><span class="section-number">5.1. </span>产品分类<a class="headerlink" href="#id6" title="此标题的永久链接">¶</a></h2>
 <p>主要划分为锗zhe/硅基材料工艺、化合物材料工艺及其他工艺。当器件特征尺寸发展至20nm以下时，Intel最早采用的 FinFET和IBM最先提出的 FD-SOI 技术成了新解决方案。</p>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id16">
 <a class="reference internal image-reference" href="_images/ic_1.png"><img alt="_images/ic_1.png" src="_images/ic_1.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">图 5.1 </span><span class="caption-text">集成电路产品按工艺分类</span><a class="headerlink" href="#id11" title="此图像的永久链接">¶</a></p>
+<p><span class="caption-number">图 5.1 </span><span class="caption-text">集成电路产品按工艺分类</span><a class="headerlink" href="#id16" title="此图像的永久链接">¶</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id17">
 <a class="reference internal image-reference" href="_images/ic_2.png"><img alt="_images/ic_2.png" src="_images/ic_2.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">图 5.2 </span><span class="caption-text">集成电路产品按功能分类</span><a class="headerlink" href="#id12" title="此图像的永久链接">¶</a></p>
+<p><span class="caption-number">图 5.2 </span><span class="caption-text">集成电路产品按功能分类</span><a class="headerlink" href="#id17" title="此图像的永久链接">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -199,10 +199,10 @@
 <p>构成电路的基本单元：有源 (active) 的晶体管器件以及无源 (Passive) 的电阻器、电容器等元器件。</p>
 <p>模拟集成电路：利用晶体管的放大特性来实现信号幅度和功率的调整。</p>
 <p>数字集成电路：利用晶体管的开关特性来实现信息的处理和传输。</p>
-<figure class="align-default" id="id13">
+<figure class="align-default" id="id18">
 <a class="reference internal image-reference" href="_images/ic_3.png"><img alt="_images/ic_3.png" src="_images/ic_3.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">图 5.3 </span><span class="caption-text">简化的物联网集成电路系统功能结构图</span><a class="headerlink" href="#id13" title="此图像的永久链接">¶</a></p>
+<p><span class="caption-number">图 5.3 </span><span class="caption-text">简化的物联网集成电路系统功能结构图</span><a class="headerlink" href="#id18" title="此图像的永久链接">¶</a></p>
 </figcaption>
 </figure>
 <p>从图中可以看出数字子系统用于数字信号的计算、存取和控制，由中央处理器 CPU、内存 SRAM、外存 NAND Flash、各种接口模块（定时器、USB等）实现。AMS 子系统用于射频和各种模拟信号的处理，由射频电路（RF 模拟前端）、模拟电路或数模混合电路（ADC、DAC、运算放大器 <a class="reference internal" href="glossary.html#term-Op-Amp"><span class="xref std std-term">Op-Amp</span></a>）等实现。</p>
@@ -355,10 +355,10 @@
 <p>现在 ASIC 通常包括微处理器、存储器、IP功能模块等，应用于智能手机、计算机。常见 ASIC 产品包括高通骁龙、海思麒麟、英伟达 GeForce 等。</p>
 <p>ASIC 主流设计流程如下。</p>
 <p><strong>使用 HDL 语言编写 RTL 代码 并进行功能仿真 (Funtional Simulation) 和测试，通过综合 (Synthesis) 优化并进行逻辑验证和可测性设计产生门级网表 (Gate Level netlist)，交付物理团队进行布局布线 (Place and Route PR) 并满足时序 (Timing) 等要求，通过物理验证和可制造性设计满足设计要求，进行签核 (Sign-off) 后最终交付圆片厂 (Foundry) 生产。</strong></p>
-<figure class="align-default" id="id14">
+<figure class="align-default" id="id19">
 <img alt="_images/ic_4.png" src="_images/ic_4.png" />
 <figcaption>
-<p><span class="caption-number">图 5.4 </span><span class="caption-text">典型的 ASIC 设计流程图</span><a class="headerlink" href="#id14" title="此图像的永久链接">¶</a></p>
+<p><span class="caption-number">图 5.4 </span><span class="caption-text">典型的 ASIC 设计流程图</span><a class="headerlink" href="#id19" title="此图像的永久链接">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -369,7 +369,115 @@
 <section id="secure-cryptoprocessor">
 <h3><span class="section-number">5.4.11. </span>Secure Cryptoprocessor<a class="headerlink" href="#secure-cryptoprocessor" title="此标题的永久链接">¶</a></h3>
 <p>安全加密处理器。本身不产生加密数据或指令，只产生密钥 key。应用在智能卡、ATM、机顶盒等。</p>
-<p>看到 2.4</p>
+</section>
+</section>
+<section id="id11">
+<h2><span class="section-number">5.5. </span>混合集成电路<a class="headerlink" href="#id11" title="此标题的永久链接">¶</a></h2>
+<p>AMS (Analog and Mixed Signal) 是将处理模拟和数字两种信号的电子器件集成在单个芯片上的集成电路。</p>
+<section id="analog-ic">
+<h3><span class="section-number">5.5.1. </span>模拟集成电路 Analog IC<a class="headerlink" href="#analog-ic" title="此标题的永久链接">¶</a></h3>
+<p>模拟集成电路的主要功能是模拟信号的采集、放大、传输、驱动以及电源管理。</p>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-number">表 5.1 </span><span class="caption-text">Analog IC 分类</span><a class="headerlink" href="#id20" title="此表格的永久链接">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><th class="stub"><p>按输入/输出响应关系</p></th>
+<td><p>线性电路（运算放大器）和非线性电路（模拟乘法器）</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>按功能</p></th>
+<td><p>放大器、比较器、电源及电源管理电路、模拟开关、数据转换器、射频电路 (RF)</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>按应用</p></th>
+<td><p>通用电路：运算放大器、电压调整器、锁相环电路、有源滤波器、模数转换器、数模转换器</p>
+<p>专用电路：音响电路、电视接收机电路等</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="adc">
+<h3><span class="section-number">5.5.2. </span>模数转换器 ADC<a class="headerlink" href="#adc" title="此标题的永久链接">¶</a></h3>
+<p>将模拟信号转换成数字信号。主要性能考量包括分辨率 (bit)、采样速率 <abbr title="Sampling Per Second">SPS</abbr>、功耗 Power。广泛应用于工业控制、仪器仪表、通信、汽车电子、航空航天、医疗电子、消费电子等领域。</p>
+</section>
+<section id="dac">
+<h3><span class="section-number">5.5.3. </span>数模转换器 DAC<a class="headerlink" href="#dac" title="此标题的永久链接">¶</a></h3>
+<p>将数字信号转换成模拟信号。性能指标主要为转换速度和转换精度。广泛应用于工业控制、高端测量仪器、通信、汽车电子、医疗电子、消费电子等领域。</p>
+</section>
+<section id="comparator">
+<h3><span class="section-number">5.5.4. </span>比较器 Comparator<a class="headerlink" href="#comparator" title="此标题的永久链接">¶</a></h3>
+<p>通过比较两个输入端的电流或电压值大小，在输出端以数字电平呈现比较结果，用作高位 ADC 的基础部件。</p>
+</section>
+<section id="op-amp">
+<h3><span class="section-number">5.5.5. </span>运算放大器 Op-Amp<a class="headerlink" href="#op-amp" title="此标题的永久链接">¶</a></h3>
+<p>能够对微弱信号进行放大的电路。发展趋势是低噪声、宽带、高压摆率等。</p>
+</section>
+<section id="instrument-amplifier">
+<h3><span class="section-number">5.5.6. </span>仪表放大器 Instrument Amplifier<a class="headerlink" href="#instrument-amplifier" title="此标题的永久链接">¶</a></h3>
+<p>以运算放大器为核心，广泛应用于传感器微弱信号放大、精密电压电流转换等场合，如信号（压力、温度等）采集设备、工业过程控制设备、心电图检测等医疗仪器、高档音响等。</p>
+</section>
+<section id="specialty-amplifier">
+<h3><span class="section-number">5.5.7. </span>专用放大器 Specialty Amplifier<a class="headerlink" href="#specialty-amplifier" title="此标题的永久链接">¶</a></h3>
+<p>以运算放大器为核心，针对特定功能和应用提供信号放大。在便携式设备、测试测量仪器、医疗系统及特殊信号处理等场合具有广泛应用。</p>
+</section>
+<section id="id12">
+<h3><span class="section-number">5.5.8. </span>电源管理集成电路<a class="headerlink" href="#id12" title="此标题的永久链接">¶</a></h3>
+<p><abbr title="Power Management IC">PMIC</abbr> 是指实现电压转换、时序控制、充放电管理、能量分配及检测等管理功能，并能为负载提供稳定供电的集成电路。主要目的是实现电源系统的高效能、低功耗、智能化。</p>
+</section>
+<section id="ac-dc-converter">
+<h3><span class="section-number">5.5.9. </span>交流/直流转换器 AC/DC Converter<a class="headerlink" href="#ac-dc-converter" title="此标题的永久链接">¶</a></h3>
+<p>将交流电转换成直流电的装置。转换器模块可以直接安装在 PCB 上，因此广泛应用于交换设备、接入设备、移动通信等。</p>
+</section>
+<section id="dc-dc-converter">
+<h3><span class="section-number">5.5.10. </span>直流/直流转换器 DC/DC Converter<a class="headerlink" href="#dc-dc-converter" title="此标题的永久链接">¶</a></h3>
+<p>实现电压转换，输出固定电压，属于开关电源的一个分支。如驱动手机等便携装置的有源矩阵有机发光二极管 (<abbr title="Active-matrix organic light-emitting diode">AMOLED</abbr>) 显示面板运用到了 DC/DC 转换器。</p>
+</section>
+<section id="id13">
+<h3><span class="section-number">5.5.11. </span>开关电源控制器<a class="headerlink" href="#id13" title="此标题的永久链接">¶</a></h3>
+<p>Switching Power Supply Controller，用于实现开关电源的闭环控制和各种保护功能。</p>
+</section>
+<section id="usb">
+<h3><span class="section-number">5.5.12. </span>通用串行总线 USB<a class="headerlink" href="#usb" title="此标题的永久链接">¶</a></h3>
+<p>通用串行总线 <abbr title="Universal Serial Bus">USB</abbr> 于1994年由 Intel Microsoft IBM 等公司联合提出。USB 接口同时包含串行器和解串器两种功能。USB 接口系统由集线器、主机和功能外设三部分组成。集线器和功能外设又称为外部设备。</p>
+</section>
+<section id="id14">
+<h3><span class="section-number">5.5.13. </span>以太网接口集成电路<a class="headerlink" href="#id14" title="此标题的永久链接">¶</a></h3>
+<p>Ethernet Interface IC。以太网是一种用于局域网 <abbr title="Local Area Network">LAN</abbr> 和城域网 <abbr title="Metropolitan Area Network">MAN</abbr> 通信的计算机网络技术，连接这些设备的接口统一称为以太网接口。</p>
+</section>
+<section id="hdmi-ic">
+<h3><span class="section-number">5.5.14. </span>高清多媒体接口集成电路 HDMI IC<a class="headerlink" href="#hdmi-ic" title="此标题的永久链接">¶</a></h3>
+<p><abbr title="High-Definition Multimedia Interface">HDMI</abbr> 通过单根连接线传输未压缩的高清视频、音频等信号，既有即插即用的特点。</p>
+</section>
+<section id="id15">
+<h3><span class="section-number">5.5.15. </span>蜂窝移动通信集成电路<a class="headerlink" href="#id15" title="此标题的永久链接">¶</a></h3>
+<p>蜂窝移动通信 Cellular Mobile Communication 网络以蜂窝无线组网的方式，通过无线信道连接终端和网络设备，进行信息交互。</p>
+<p>手机终端的核心芯片包括射频芯片和基带芯片。射频芯片用于射频收发、频率合成和功率放大，基带芯片负责信号、协议处理，既合成发射用的基带信号，也解码接收的基带信号。此外，电源管理芯片和多媒体处理芯片也是手机终端的重要组成部分。</p>
+<p>高通公司的射频芯片和基带芯片在业界具有技术领先地位，基本垄断码分多址 <abbr title="Code-Division Multiple Access">CDMA</abbr> 技术专利。</p>
+</section>
+<section id="audio-codec">
+<h3><span class="section-number">5.5.16. </span>音频编解码器 Audio Codec<a class="headerlink" href="#audio-codec" title="此标题的永久链接">¶</a></h3>
+<p>对音频数据流进行编码或解码的设备或程序。能够以较少数量的比特位来表示高保真 <abbr>Hi-Fi &lt;High Fidelity&gt;</abbr> 音频信号。</p>
+<p>音频编码：将模拟音频信号转换成数字信息并完成编码。ADC</p>
+<p>音频解码：将数字信号解码并转换成模拟音频信号。DAC</p>
+<p>包括以下几种技术。</p>
+<ul class="simple">
+<li><p>MPEG-1 (VCD) 是一种有损的数据压缩方式</p></li>
+<li><p>MPEG-2 (DVD) 对 MPEG-1 加低采样频率、实施多声道扩展、先进音频编码 (<abbr title="Advanced Audio Coding">AAC</abbr>)</p></li>
+<li><p>MPEG-4 压缩效率进一步提高，可存储、传输多种音频内容</p></li>
+<li><p>AC-3 (Alias Cancellation Version 3) 是以 AC-1 和 AC-2 为基础发展起来的多通道编码技术</p></li>
+</ul>
+<p>AAC 和 AC-3 是高保真、高采样率的音频标准</p>
+</section>
+<section id="rf-ic-products">
+<h3><span class="section-number">5.5.17. </span>射频集成电路产品 RF IC Products<a class="headerlink" href="#rf-ic-products" title="此标题的永久链接">¶</a></h3>
+<p>主要包括以下几种。</p>
+<ul class="simple">
+<li><p>射频 IC 模块：功率放大器电路 Power Amplifier、低噪声放大器电路 Low Noise Amplifier、对射频信号进行降频解调和升频调制的混频器电路 Mixer、提供高频低噪声时钟信号的振荡器电路 Oscillator、对接收和发射信号进行有效分离的双工器电路 Duplexer，以及对不同频带的信号进行滤除的滤波器电路 Filter</p></li>
+<li><p>射频器件：微波器件、毫米波器件等</p></li>
+<li><p>射频集成芯片：包括收音芯片、导航芯片、Wi-Fi 芯片、蓝牙芯片、网关芯片 ZigBee，非接触式射频识别芯片 RFID、近场通信芯片 NFC 等。</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -419,6 +527,26 @@
 <li class="toctree-l3"><a class="reference internal" href="#asic">5.4.9. ASIC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#np">5.4.10. NP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#secure-cryptoprocessor">5.4.11. Secure Cryptoprocessor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">5.5. 混合集成电路</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analog-ic">5.5.1. 模拟集成电路 Analog IC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adc">5.5.2. 模数转换器 ADC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dac">5.5.3. 数模转换器 DAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparator">5.5.4. 比较器 Comparator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#op-amp">5.5.5. 运算放大器 Op-Amp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instrument-amplifier">5.5.6. 仪表放大器 Instrument Amplifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#specialty-amplifier">5.5.7. 专用放大器 Specialty Amplifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">5.5.8. 电源管理集成电路</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ac-dc-converter">5.5.9. 交流/直流转换器 AC/DC Converter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dc-dc-converter">5.5.10. 直流/直流转换器 DC/DC Converter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">5.5.11. 开关电源控制器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usb">5.5.12. 通用串行总线 USB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">5.5.13. 以太网接口集成电路</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hdmi-ic">5.5.14. 高清多媒体接口集成电路 HDMI IC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">5.5.15. 蜂窝移动通信集成电路</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-codec">5.5.16. 音频编解码器 Audio Codec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rf-ic-products">5.5.17. 射频集成电路产品 RF IC Products</a></li>
 </ul>
 </li>
 </ul>
