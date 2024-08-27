@@ -1,141 +1,59 @@
 HTML
-======
+===========
 
-:W3C: World WIde Web Consortium，国际标准化组织，制定包括 HTML、CSS、XML 等在内的 web 规范和指南。
+<a> </a> —— opening tag and closing tag
 
-:自闭标签: Self-closing Tag，为养成良好习惯，在文字后加上“/”进行标识。例：\ ``<meta charset="utf-8"/>``\
+<br> —— self-closing tag
 
-:非自闭标签: Non-self-closing Tag，又称为开放标签，配对出现。例：\ ``<head> ... </head>``\
+- tag/element: make up the main structure of html files
 
-:元素: 分为块元素和行内元素。
-       
-       块元素为无论内容多少，该元素独占一行（如段落标签 ``<p> ... </p>`` 和标题标签 \ ``<h1> ... </h1>``\）。
+- attribute: included in the opening tag for additional info, such as ``src|href|class|id``.
 
-       行内元素指一行内可以容纳多个元素（如粗体 ``<strong> ... </strong>`` 和斜体 ``<em> ... </em>`` 可以同时放在一行之中）。
+- rule: define style of certain elements, a :abbr:`CSS <Cascading Style Sheet>` file may have as many rules as possible.
 
+- class: rules (start with "." in CSS) contained in the ``class`` attribute modify a class of elements.
 
+- id: rule (start with "#" in CSS) contained in the ``id`` attribute modify only one element. ie, one id can only be used to one tag.
 
-.. list-table:: HTML 语法
-    :widths: 30 70
-    :header-rows: 1
-    :align: left
+- property: defined styles included in a rule. For example, in rule ``p{color: red;}``, ``color`` is a property and its value is ``red``.
 
-    * - 语法
-      - 说明
-    * - ``<!xxx>``
-      - 注释内容（IDEA 快捷键为 ctrl + /）。
+.. code:: html
 
-        如 ``<!doctype html>`` 为 html 文件开头的声明、注释。
-    * - ``<head> ... </head>``
-      - 文件头部内容，用于设置 meta、title... 等信息。
-    * - ``<h1> ... </h1>``
-
-        ``<h2> ... </h2>``
-
-        ``<h3> ... </h3>``
-      - 标题标签，分别为一级、二级、三级。
-    * - ``<p> ... </p>``
-      - 段落标签（IDEA 快捷键为 p + Tab）。
-    * - ``<br/>``
-      - 换行标签。
-    * - ``<hr/>``
-      - 水平线标签。
-    * - ``<strong> ... </strong>``
-      - 粗体文本标签。
-    * - ``<em> ... </em>``
-      - 斜体文本标签。
-    
-
-.. tip::
-
-   常见的转义符号包括：
-
-     1. \ ``&nbsp;``\ 输出为空格；
-
-     2. \ ``&gt;``\ 输出为大于号；
-
-     3. \ ``&lt;``\ 输出为小于号；
-
-     4. \ ``&copy;``\ 输出为版权符号。
+   <!doctype>
+   <html>
+        <head>
+             <link rel="stylesheet" href="style.css">
+             <title> </title>
+             <style> </style>
+        </head>
+        <body>
+             <h1> </h1> /* 标题共 6 级 h1 - h6 */
+             <p> </p>
+             <br>
+             <em> </em>
+             <strong> </strong>
+             <img>
+             <a> </a>
+             <button> </button>
+        </body>
+   </html>
 
 
-图像标签
----------
+.. code:: css
 
-.. code::
-
-           <img src="" alt="" title="" width="" height=""/>
-
-- src：图像路径，\ **必需**\。
-
-- alt：图像无法显示时的替代文字，\ **必需**\。
-
-- title：鼠标悬停在图像上时的提示文字。
-
-- width：宽度。
-
-- height：高度。
-
-
-链接标签
------------
-
-外部链接
-^^^^^^^^^
-
-.. code::
-
-           <a href="" target=""> ... </a>
-
-- href：跳转的目标链接。
-
-- target：以何种方式打开。
-
-    - ``_blank`` 空白页打开。
-
-    - ``_self`` 当前页打开（默认）。
-
-- ... 中为跳转处的内容，可以是文字和图像。
-
-
-内部链接
-^^^^^^^^^^^
-
-锚点处：
-
-.. code::
-
-           <a name=""> ... </a>
-
-跳转处：
-
-.. code::
-
-           <a href="#(name)" ... </a>
-
-- name：锚点的标签 (tag)。
-
-- href：填写 # + tag。
-
-
-.. note::
-
-   # 号用于定位至锚点链接具体位置（在 HTML 网址栏中非常常见）。
-
-
-邮件链接
-^^^^^^^^^^^
-
-.. code::
-
-           <a href="mailto:_____"> ... </a>
-
-
-QQ 链接
-^^^^^^^^^
-
-在 \ `QQ 推广官网 <https://qidian.qq.com/apply.html>`_\输入自己的 QQ 号，直接复制生成的代码即可。
-
+   p{
+   color: red;
+   background-color: blue;
+   font-style: italic;
+   font-weight: bold;
+   font-family: Helvetica;
+   font-size: 10px;
+   width: 100px;
+   height: 100px;
+   border: solix 10px red;
+   /* if an image is square (such as 100px x 100px), setting border-radius to half of the width makes the image a round circle. */
+   border-radius: 50 px; 
+   }
 
 
 
