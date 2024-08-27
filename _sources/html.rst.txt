@@ -9,7 +9,7 @@ HTML
 
 - attribute: included in the opening tag for additional info, such as ``src|href|class|id``.
 
-- rule: define style of certain elements, a :abbr:`CSS <Cascading Style Sheet>` file may have as many rules as possible.
+- rule: define style of certain elements, a :abbr:`CSS (Cascading Style Sheet)` file may have as many rules as possible.
 
 - class: rules (start with "." in CSS) contained in the ``class`` attribute modify a class of elements.
 
