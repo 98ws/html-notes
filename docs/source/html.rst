@@ -18,8 +18,9 @@ HTML
 - property: defined styles included in a rule. For example, in rule ``p{color: red;}``, ``color`` is a property and its value is ``red``.
 
 .. code:: html
+   :caption: HTML 模板
 
-   <!doctype>
+   <!doctype html>
    <html>
         <head>
              <link rel="stylesheet" href="style.css">
@@ -27,7 +28,7 @@ HTML
              <style> </style>
         </head>
         <body>
-             <h1> </h1> /* 标题共 6 级 h1 - h6 */
+             <h1> </h1> <!-- 标题共 6 级 h1 - h6 -->
              <p> </p>
              <br>
              <em> </em>
@@ -40,6 +41,7 @@ HTML
 
 
 .. code:: css
+   :caption: CSS 模板
 
    p{
    color: red;
