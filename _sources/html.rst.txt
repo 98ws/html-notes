@@ -17,7 +17,7 @@ HTML
 
 - property: defined styles included in a rule. For example, in rule ``p{color: red;}``, ``color`` is a property and its value is ``red``.
 
-.. code:: html
+.. code-block:: html
    :caption: HTML 模板
 
    <!doctype html>
@@ -40,7 +40,7 @@ HTML
    </html>
 
 
-.. code:: css
+.. code-block:: css
    :caption: CSS 模板
 
    p{

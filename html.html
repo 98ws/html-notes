@@ -44,6 +44,47 @@
 <li><p>id: rule (start with &quot;#&quot; in CSS) contained in the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute modify only one element. ie, one id can only be used to one tag.</p></li>
 <li><p>property: defined styles included in a rule. For example, in rule <code class="docutils literal notranslate"><span class="pre">p{color:</span> <span class="pre">red;}</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code> is a property and its value is <code class="docutils literal notranslate"><span class="pre">red</span></code>.</p></li>
 </ul>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">代码 1.1 </span><span class="caption-text">HTML 模板</span><a class="headerlink" href="#id1" title="此代码块的永久链接">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="cm">&lt;!-- 标题共 6 级 h1 - h6 --&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">img</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">代码 1.2 </span><span class="caption-text">CSS 模板</span><a class="headerlink" href="#id2" title="此代码块的永久链接">¶</a></div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="p">{</span>
+<span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
+<span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Helvetica</span><span class="p">;</span>
+<span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="n">solix</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="c">/* if an image is square (such as 100px x 100px), setting border-radius to half of the width makes the image a round circle. */</span>
+<span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="n">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </section>
 
 
