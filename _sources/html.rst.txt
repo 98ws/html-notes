@@ -108,4 +108,7 @@ HTML
         </body>
     
 
+.. figure:: media/html_1.png
+    :align: center
 
+    HTML+CSS+JavaScript
