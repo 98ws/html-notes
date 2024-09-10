@@ -36,4 +36,7 @@ numfig_format = {
 html_favicon = 'media/favicon.ico'
 html_theme = 'alabaster' #sphinxawesome_theme
 html_static_path = ['_static']
-
+rst_prolog = """
+.. role:: raw-html(raw)
+    :format: html
+"""
