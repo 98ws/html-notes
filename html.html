@@ -140,6 +140,20 @@
 <p><span class="caption-number">图 1.1 </span><span class="caption-text">HTML+CSS+JavaScript</span><a class="headerlink" href="#id3" title="此图像的永久链接">¶</a></p>
 </figcaption>
 </figure>
+<section id="text-formatting">
+<h2><span class="section-number">1.1. </span>Text Formatting<a class="headerlink" href="#text-formatting" title="此标题的永久链接">¶</a></h2>
+<p><span class="raw-html"><b>粗体</b></span>： <code class="docutils literal notranslate"><span class="pre">&lt;b&gt;...&lt;/b&gt;</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;...&lt;/strong&gt;</span></code></p>
+<p><span class="raw-html"><i>斜体</i></span>： <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;...&lt;/i&gt;</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">&lt;em&gt;...&lt;/em&gt;</span></code></p>
+<p><span class="raw-html"><u>下划线</u></span>： <code class="docutils literal notranslate"><span class="pre">&lt;u&gt;...&lt;/u&gt;</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">&lt;ins&gt;...&lt;/ins&gt;</span></code></p>
+<p><span class="raw-html"><s>删除线</s></span>： <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;...&lt;/s&gt;</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">&lt;del&gt;...&lt;/del&gt;</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>The &lt;strong&gt; element is for content that is of greater importance, while the &lt;b&gt; element is used to draw attention to text without indicating that it's more important. They both will look the same but from syntax perspective they are entirely different.</p>
+<p>&lt;strong&gt; should be used preferentially because for users with impaired vision their screen reader will read something in a &lt;strong&gt; tag with different emphasis. Same thing for &lt;em&gt; and &lt;i&gt; tags, both will italicise the text on the screen but &lt;em&gt; will result in screen readers literally putting more emphasis on the text within the tag. So from what I understand, it's all about trying to be inclusive.</p>
+<p>Tags such as &lt;b&gt;, &lt;i&gt;, and &lt;u&gt; do not convey any semantic meaning or importance to the text. They are used solely for visual presentation. Whereas tags like &lt;strong&gt;, &lt;em&gt;, &lt;ins&gt;, &lt;del&gt; indicate semantically changed meaning to the text.</p>
+<p>&lt;strong&gt; and &lt;em&gt; can be called <span class="raw-html"><strong>Semantic formatting tags</strong></span> because they are <span class="raw-html"><b>semantic formatting tags</b></span>.</p>
+</div>
+</section>
 </section>
 
 
@@ -161,7 +175,10 @@
 <h3>导航</h3>
 <p class="caption" role="heading"><span class="caption-text">目录</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. HTML</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. HTML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#text-formatting">1.1. Text Formatting</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="cmd.html">2. 命令行</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">3. Python 学习笔记</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ic.html">4. IC</a></li>

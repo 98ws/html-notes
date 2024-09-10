@@ -112,3 +112,24 @@ HTML
     :align: center
 
     HTML+CSS+JavaScript
+
+Text Formatting
+-----------------
+
+:raw-html:`<b>粗体</b>`\： ``<b>...</b>`` 或者 ``<strong>...</strong>``
+
+:raw-html:`<i>斜体</i>`\： ``<i>...</i>`` 或者 ``<em>...</em>``
+
+:raw-html:`<u>下划线</u>`\： ``<u>...</u>`` 或者 ``<ins>...</ins>``
+
+:raw-html:`<s>删除线</s>`\： ``<s>...</s>`` 或者 ``<del>...</del>``
+
+.. note::
+
+   The <strong> element is for content that is of greater importance, while the <b> element is used to draw attention to text without indicating that it's more important. They both will look the same but from syntax perspective they are entirely different.
+
+   <strong> should be used preferentially because for users with impaired vision their screen reader will read something in a <strong> tag with different emphasis. Same thing for <em> and <i> tags, both will italicise the text on the screen but <em> will result in screen readers literally putting more emphasis on the text within the tag. So from what I understand, it's all about trying to be inclusive.
+
+   Tags such as <b>, <i>, and <u> do not convey any semantic meaning or importance to the text. They are used solely for visual presentation. Whereas tags like <strong>, <em>, <ins>, <del> indicate semantically changed meaning to the text.
+
+   <strong> and <em> can be called :raw-html:`<strong>Semantic formatting tags</strong>` because they are :raw-html:`<b>semantic formatting tags</b>`\.
