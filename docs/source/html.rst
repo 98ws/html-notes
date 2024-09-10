@@ -132,4 +132,4 @@ Text Formatting
 
    Tags such as <b>, <i>, and <u> do not convey any semantic meaning or importance to the text. They are used solely for visual presentation. Whereas tags like <strong>, <em>, <ins>, <del> indicate semantically changed meaning to the text.
 
-   <strong> and <em> can be called :raw-html:`<strong>Semantic formatting tags</strong>` because they are :raw-html:`<b>semantic formatting tags</b>`\.
+   <strong> and <em> can be called :raw-html:`<strong>Semantic formatting tags</strong>`\.
