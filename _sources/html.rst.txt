@@ -133,3 +133,285 @@ Text Formatting
    Tags such as <b>, <i>, and <u> do not convey any semantic meaning or importance to the text. They are used solely for visual presentation. Whereas tags like <strong>, <em>, <ins>, <del> indicate semantically changed meaning to the text.
 
    <strong> and <em> can be called :raw-html:`<strong>Semantic formatting tags</strong>`\.
+
+div
+-----------
+
+在 HTML 中，<div> 标签是一个通用的块级容器元素，用于将内容分组或组织成不同的部分。它本身没有任何特定的视觉效果，但可以通过 CSS 样式进行控制。<div> 常用于布局、结构化页面和组织内容。
+
+**基本用法**
+
+.. code:: html
+
+        <div>
+            <!-- 这里是要分组的内容 -->
+            <p>这是一个段落。</p>
+            <p>这是另一个段落。</p>
+        </div>
+
+
+**配合 CSS 使用**
+
+<div> 通常与 CSS 结合使用，以控制它的外观、布局和行为。
+
+.. code:: html
+
+        <div class="container">
+            <p>带有样式的段落。</p>
+        </div>
+
+.. code:: css
+
+            .container {
+                background-color: lightblue; /* 设置背景颜色 */
+                padding: 20px;               /* 设置内边距 */
+                border: 1px solid black;      /* 设置边框 */
+            }
+
+**使用场景**
+
+1. 布局设计：`<div>` 可用于创建页面布局，例如页眉、导航栏、主内容、页脚等。
+2. 分组内容：将多个相关的元素放在一个 div 中，便于组织和应用样式。
+3. 响应式设计：配合 CSS 的 flexbox 或 grid，使用 <div> 构建响应式页面。
+
+**与其他元素的区别**
+
+<div> vs <span>：
+
+  <div> 是块级元素，它会独占一整行，而 <span> 是行内元素，通常用于内联样式或小范围的文本包装。
+
+Table
+-----------
+
+::
+
+        <table>
+          <thead>
+            <tr>
+              <th>...</th>
+              <th>...</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>...</th>
+              <td>...</td>
+            </tr>
+          </tbody>
+        </table>
+
+table---
+
+  attribute: width='' deprecated.应使用 CSS 设置样式
+
+tr---table row
+
+td---table cell data
+
+  attribute: colspan='' 合并单元格
+
+th---table headding 
+ 
+  attribute: scope='col'/'row' 指定该表头用于行还是列
+
+
+form
+---------
+
+We can think of the internet as a network of computers which send and receive information. Computers need an HTTP request to know how to communicate. The HTTP request instructs the receiving computer how to handle the incoming information. 
+
+The <form> element is a great tool for collecting information, but then we need to send that information somewhere else for processing. We need to supply the <form> element with both the location of where the <form>‘s information goes and what HTTP request to make. Take a look at the sample <form> below:
+
+.. code:: html
+
+        <form action="/example.html" method="POST">
+          <h1>...</h1>
+          <p>...</p>
+          <label for='login'>登录</label>
+          <br>
+          <input type='text' name='username' value='张三' id='login'>
+
+
+          <select id='' name=''>
+            <option value=''>xxxx</option>
+          </select>
+
+          <textarea id='' name='' rows='' cols='' value=''>...</textarea>
+        </form>
+
+form---
+
+  attributes:
+  
+    action--determines where the information is sent.
+    
+    method--is assigned a HTTP verb that is included in the HTTP request. It does not need to be capitalized.
+
+label---
+
+  attribute: for--用于匹配 input 元素中的 id。
+
+input--- 是闭合标签！！
+
+  attributes:
+
+    type--determines how it renders on the web page and what kind of data it accepts. Default is 'text'.
+
+      type-text, password, number, range, checkbox, radio, submit
+
+    name--the name of the input information. The user-typed info is paired with 'name' value, and they are sent when the form is submitted.
+
+    value--assign a default value so that users have a pre-filled text field.
+
+    id--for use in label element
+
+    step--用于 number 或 range type，显示数字增减按钮或增减大小。
+
+    min--用于 range type
+
+    max--用于 range type
+
+    list--用于 datalist 元素，其值应为 datalist 元素中 id 参数的值
+
+    required--不需要设置值，表示必填窗口项。
+
+    minlength--输入的最少字数要求
+
+    maxlength--输入的最大字数要求
+
+    pattern--设置正则表达式，规定输入的要求（如需要设置输入14-16位银行卡号，则 pattern='[0-9]{14,16}'）
+
+    在上述代码块示例中，张三为预先填好的信息，提交表格时会将 'username=张三' 提交给服务器。
+
+select--- 用于下拉列表选择
+
+  attributes:
+
+    id-- 用于 label 元素
+
+    name-- 用于表格提交
+
+datalist--- 用于可以输入查找的下拉列表选择
+
+  attribute: id-- 用于匹配 input 元素中的 list
+
+  datalist 元素中的 option 中间不用加文字，因为是需要用户输入并匹配选项。而 select 元素中的 option 子元素中间需要加文字，因为其是需要用户下拉选择选项。 
+
+option---
+
+  attribute: value--用于表格提交
+
+textarea--- 用于长文本框（填写意见/投诉等）
+
+    
+Form Validation
+-------------------
+
+Validation is the concept of checking user provided date against the required data.
+
+server-side validation：数据传至服务器进行验证（如用户登录）
+
+client-side validation：在浏览器（客户端）检查数据，发生于数据传输至服务器之前。
+
+不同浏览器都共用 HTML5 内置的客户端验证。
+
+
+
+
+.. code:: html
+    
+     <figure>
+       <img src=''>
+       <figcaption>xxxx</figcaption>
+     </figure>
+
+     <audio controls>
+       <source src='' type=''>
+     </audio>
+
+     <video src='' controls autoplay loop>Video Not Supported</video>
+
+
+.. code:: html
+   
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <link rel="stylesheet" type="text/css" href="style.css">
+          </head>
+          <body>
+            <header>
+              <h1>Navigational Links</h1>
+              <nav>
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#posts">Posts</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </header>
+            
+            <main>
+              <section>
+                <article>
+                  <h2>Facts About Dogs</h2>
+                  <p>
+                  Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+                  </p>
+                </article>
+                <aside>
+                  <p>A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
+                  </p> 
+                </aside>
+              </section> 
+              <figure>
+                <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+                <figcaption>A cute dog.</figcaption>
+              </figure>  
+              <audio controls>
+                <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+              </audio> 
+              <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+              </video>
+              <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+                 
+            </main>
+            
+            <footer>
+              <p>Contact me at +1 234 567 8910 </p>
+            </footer>
+                      
+          </body>
+        </html>
+    
+
+- Semantic HTML introduces meaning to a page through specific elements that provide context as to what is in between the tags.
+
+- Semantic HTML is a modern standard and makes a website accessible for people who use screen readers to translate the webpage and improves your website’s SEO.
+
+- <header>, <nav> , <main> and <footer> create the basic structure of the webpage.
+  
+- <section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme.
+
+- <article> holds content that makes sense on its own such as articles, blogs, comments, etc.
+  
+- <aside> contains information that is related to the main content, but not required in order to understand the dominant information.
+
+- <figure> encapsulates all types of media.
+
+- <figcaption> is used to describe the media in <figure>.
+
+- <video>, <embed>, and <audio> elements are used for media files.
+
+CSS
+------
+
+selector + declaration block + declaration + property + value
+
+.. figure:: media/css_anatomy.jpg
+   :align: center
+   
+   CSS Anatomy
+
+
+
