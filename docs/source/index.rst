@@ -7,9 +7,3 @@
    :caption: 目录
 
    html.rst
-   cmd.rst
-   python.rst
-   ic.rst
-   glossary.rst
-
-
