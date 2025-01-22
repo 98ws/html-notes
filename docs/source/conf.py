@@ -23,7 +23,7 @@ needs_sphinx = '' # minimum supported version of Sphinx required for this projec
 templates_path = ['_templates']
 exclude_patterns = []
 
-language = 'zh'
+language = 'zh_CN'
 
 numfig = True
 numfig_format = {
@@ -34,9 +34,11 @@ numfig_format = {
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_favicon = 'media/favicon.ico'
-html_theme = 'alabaster' #sphinxawesome_theme
+html_theme = 'sphinxawesome_theme'
 html_static_path = ['_static']
 rst_prolog = """
 .. role:: raw-html(raw)
     :format: html
+
 """
+
