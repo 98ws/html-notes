@@ -1,37 +1,101 @@
 <!DOCTYPE html>
 
-<html lang="zh">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>1. HTML &#8212; 学习笔记 2024.01 文档</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=33ae7075"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
-    <link rel="icon" href="_static/favicon.ico"/>
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="个人学习笔记" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
-
-          <div class="body" role="main">
-            
-  <section id="html">
+<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" lang="zh-CN" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>1. HTML | 学习笔记 2024.01 文档</title>
+<meta content="1. HTML | 学习笔记 2024.01 文档" property="og:title"/>
+<meta content="1. HTML | 学习笔记 2024.01 文档" name="twitter:title"/>
+<link href="_static/pygments.css?v=e72c8e07" rel="stylesheet" type="text/css"/>
+<link href="_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
+<link href="_static/favicon.ico" rel="icon"/>
+<link href="search.html" rel="search" title="搜索"/>
+<link href="genindex.html" rel="index" title="索引"/>
+<link href="css.html" rel="next" title="2. CSS"/>
+<link href="index.html" rel="prev" title="个人学习笔记"/>
+<script>
+    <!-- Prevent Flash of wrong theme -->
+      const userPreference = localStorage.getItem('darkMode');
+      let mode;
+      if (userPreference === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        mode = 'dark';
+        document.documentElement.classList.add('dark');
+      } else {
+        mode = 'light';
+      }
+      if (!userPreference) {localStorage.setItem('darkMode', mode)}
+    </script>
+</head>
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false, showScrollTop: false }">
+<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
+      Skip to content
+    </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
+<div class="hidden mr-4 md:flex">
+<a class="flex items-center mr-6" href="index.html"><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">学习笔记 2024.01 文档</span>
+</a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
+<svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
+</svg>
+<span class="sr-only">Toggle navigation menu</span>
+</button>
+<div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
+<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="search.html" class="relative flex items-center group" id="searchbox" method="get">
+<input aria-label="Search the docs" class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" id="search-input" name="q" placeholder="Search ..." type="search" x-ref="search"/>
+<kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
+<span class="text-xs">⌘</span>
+    K
+  </kbd>
+</form>
+</div>
+<nav class="flex items-center space-x-1">
+<button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'" aria-label="Color theme switcher" class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button">
+<svg class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z"></path>
+</svg>
+<svg class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z"></path>
+</svg>
+</button>
+</nav>
+</div>
+</div>
+</header>
+<div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
+<a class="!justify-start text-sm md:!hidden bg-background" href="index.html"><span class="font-bold text-clip whitespace-nowrap">学习笔记 2024.01 文档</span>
+</a>
+<div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
+<div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
+<p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css.html">2. CSS</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<button @click="showSidebar = false" class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100" type="button">
+<svg class="h-4 w-4" fill="currentColor" height="24" stroke="none" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z"></path>
+</svg>
+</button>
+</aside>
+<main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+<div class="w-full min-w-0 mx-auto">
+<nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
+<a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="index.html">
+<span class="hidden md:inline">学习笔记 2024.01 文档</span>
+<svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
+</svg>
+</a>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap"><span class="section-number">1. </span>HTML</span>
+</nav>
+<div id="content" role="main">
+<section id="html">
 <h1><span class="section-number">1. </span>HTML<a class="headerlink" href="#html" title="此标题的永久链接">¶</a></h1>
 <p>&lt;a&gt; &lt;/a&gt; —— opening tag and closing tag</p>
 <p>&lt;br&gt; —— self-closing tag</p>
@@ -39,144 +103,144 @@
 <li><p>tag/element: make up the main structure of html files</p></li>
 <li><p>attribute: included in the opening tag for additional info, such as <code class="docutils literal notranslate"><span class="pre">src|href|class|id</span></code>.</p></li>
 <li><p>rule: define style of certain elements, a <abbr title="Cascading Style Sheet">CSS</abbr> file may have as many rules as possible.</p></li>
-<li><p>class: rules (start with &quot;.&quot; in CSS) contained in the <code class="docutils literal notranslate"><span class="pre">class</span></code> attribute modify a class of elements.</p></li>
-<li><p>id: rule (start with &quot;#&quot; in CSS) contained in the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute modify only one element. ie, one id can only be used to one tag.</p></li>
+<li><p>class: rules (start with “.” in CSS) contained in the <code class="docutils literal notranslate"><span class="pre">class</span></code> attribute modify a class of elements.</p></li>
+<li><p>id: rule (start with “#” in CSS) contained in the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute modify only one element. ie, one id can only be used to one tag.</p></li>
 <li><p>property: defined styles included in a rule. For example, in rule <code class="docutils literal notranslate"><span class="pre">p{color:</span> <span class="pre">red;}</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code> is a property and its value is <code class="docutils literal notranslate"><span class="pre">red</span></code>.</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-number">代码 1.1 </span><span class="caption-text">HTML 模板</span><a class="headerlink" href="#id1" title="此代码块的永久链接">¶</a></div>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="cm">&lt;!-- 标题共 6 级 h1 - h6 --&gt;</span>
-          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">img</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</pre></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="cp">&lt;!doctype html&gt;</span>
+</span><span id="line-2"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="line-3">     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="line-4">          <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+</span><span id="line-5">          <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="line-6">          <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span><span id="line-7">     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="line-8">     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="line-9">          <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="cm">&lt;!-- 标题共 6 级 h1 - h6 --&gt;</span>
+</span><span id="line-10">          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-11">          <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span><span id="line-12">          <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+</span><span id="line-13">          <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+</span><span id="line-14">          <span class="p">&lt;</span><span class="nt">img</span><span class="p">&gt;</span>
+</span><span id="line-15">          <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="line-16">          <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="line-17">     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="line-18"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-number">代码 1.2 </span><span class="caption-text">CSS 模板</span><a class="headerlink" href="#id2" title="此代码块的永久链接">¶</a></div>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="p">{</span>
-<span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
-<span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
-<span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
-<span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
-<span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Helvetica</span><span class="p">;</span>
-<span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-<span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
-<span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
-<span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="n">solix</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
-<span class="c">/* if an image is square (such as 100px x 100px), setting border-radius to half of the width makes the image a round circle. */</span>
-<span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* in clockwise order: top-left top-right bottom-right bottom-left */</span>
-<span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* generates space between content and border of an element. C-P-B-M */</span>
-<span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">/* in clockwise order: top-right-bottom-left */</span>
-<span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-<span class="k">padding-right</span><span class="p">:</span>
-<span class="k">padding-top</span><span class="o">:</span>
-<span class="k">padding-bottom</span><span class="o">:</span>
-<span class="kc">text</span><span class="o">-</span><span class="n">align</span><span class="o">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
-<span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="p">;</span><span class="w">     </span><span class="c">/* generates space around an element, outside of border */</span>
-<span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="nt">p</span><span class="p">{</span>
+</span><span id="line-2"><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+</span><span id="line-3"><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+</span><span id="line-4"><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
+</span><span id="line-5"><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+</span><span id="line-6"><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Helvetica</span><span class="p">;</span>
+</span><span id="line-7"><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="line-8"><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="line-9"><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="line-10"><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="n">solix</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+</span><span id="line-11"><span class="c">/* if an image is square (such as 100px x 100px), setting border-radius to half of the width makes the image a round circle. */</span>
+</span><span id="line-12"><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* in clockwise order: top-left top-right bottom-right bottom-left */</span>
+</span><span id="line-13"><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* generates space between content and border of an element. C-P-B-M */</span>
+</span><span id="line-14"><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">/* in clockwise order: top-right-bottom-left */</span>
+</span><span id="line-15"><span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="line-16"><span class="k">padding-right</span><span class="p">:</span>
+</span><span id="line-17"><span class="k">padding-top</span><span class="o">:</span>
+</span><span id="line-18"><span class="k">padding-bottom</span><span class="o">:</span>
+</span><span id="line-19"><span class="kc">text</span><span class="o">-</span><span class="n">align</span><span class="o">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+</span><span id="line-20"><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="p">;</span><span class="w">     </span><span class="c">/* generates space around an element, outside of border */</span>
+</span><span id="line-21"><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="line-22"><span class="p">}</span>
+</span></code></pre></div>
 </div>
 </div>
 <p><a class="reference internal" href="#html-sample"><span class="std std-numref">代码 1.3</span></a> 的来源网址是 <a class="reference external" href="https://www.codecademy.com/courses/learn-html/lessons/intro-to-html/exercises/review-html-structure">Codecademy</a></p>
 <div class="literal-block-wrapper docutils container" id="html-sample">
 <div class="code-block-caption"><span class="caption-number">代码 1.3 </span><span class="caption-text">html 简短示例</span><a class="headerlink" href="#html-sample" title="此代码块的永久链接">¶</a></div>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>The Brown Bear<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;introduction&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>About Brown Bears<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The brown bear (<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Ursus arctos<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>) is native to parts of northern Eurasia and North America. Its conservation status is currently <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Least Concern<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Species<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Arctos<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Collarus<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Horribilis<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Nelsoni (extinct)<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Features<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;habitat&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Habitat<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Countries with Large Brown Bear Populations<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Russia<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>United States<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Canada<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Countries with Small Brown Bear Populations<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;media&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Media<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;A Brown Bear&quot;</span><span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;320&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;240&quot;</span> <span class="na">controls</span><span class="p">&gt;</span>
-        Video not supported
-        <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</pre></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="line-2">      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>The Brown Bear<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="line-3">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"introduction"</span><span class="p">&gt;</span>
+</span><span id="line-4">        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>About Brown Bears<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="line-5">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The brown bear (<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Ursus arctos<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>) is native to parts of northern Eurasia and North America. Its conservation status is currently <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Least Concern<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-6">        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Species<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span><span id="line-7">        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="line-8">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Arctos<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-9">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Collarus<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-10">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Horribilis<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-11">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Nelsoni (extinct)<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-12">        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="line-13">        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Features<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span><span id="line-14">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-15">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="line-16">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"habitat"</span><span class="p">&gt;</span>
+</span><span id="line-17">        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Habitat<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="line-18">        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Countries with Large Brown Bear Populations<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span><span id="line-19">        <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span><span id="line-20">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Russia<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-21">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>United States<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-22">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Canada<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-23">        <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span><span id="line-24">        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Countries with Small Brown Bear Populations<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span><span id="line-25">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-26">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="line-27">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"media"</span><span class="p">&gt;</span>
+</span><span id="line-28">        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Media<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="line-29">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"A Brown Bear"</span><span class="p">/&gt;</span>
+</span><span id="line-30">        <span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4"</span> <span class="na">width</span><span class="o">=</span><span class="s">"320"</span> <span class="na">height</span><span class="o">=</span><span class="s">"240"</span> <span class="na">controls</span><span class="p">&gt;</span>
+</span><span id="line-31">        Video not supported
+</span><span id="line-32">        <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</span><span id="line-33">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="line-34">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
 </div>
 <figure class="align-center" id="id3">
-<img alt="_images/html_1.png" src="_images/html_1.png" />
+<img alt="_images/html_1.png" src="_images/html_1.png"/>
 <figcaption>
 <p><span class="caption-number">图 1.1 </span><span class="caption-text">HTML+CSS+JavaScript</span><a class="headerlink" href="#id3" title="此图像的永久链接">¶</a></p>
 </figcaption>
 </figure>
 <section id="text-formatting">
-<h2><span class="section-number">1.1. </span>Text Formatting<a class="headerlink" href="#text-formatting" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Text Formatting<a class="headerlink" href="#text-formatting" title="此标题的永久链接" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#text-formatting'">¶</a></h2>
 <p><span class="raw-html"><b>粗体</b></span>： <code class="docutils literal notranslate"><span class="pre">&lt;b&gt;...&lt;/b&gt;</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;...&lt;/strong&gt;</span></code></p>
 <p><span class="raw-html"><i>斜体</i></span>： <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;...&lt;/i&gt;</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">&lt;em&gt;...&lt;/em&gt;</span></code></p>
 <p><span class="raw-html"><u>下划线</u></span>： <code class="docutils literal notranslate"><span class="pre">&lt;u&gt;...&lt;/u&gt;</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">&lt;ins&gt;...&lt;/ins&gt;</span></code></p>
 <p><span class="raw-html"><s>删除线</s></span>： <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;...&lt;/s&gt;</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">&lt;del&gt;...&lt;/del&gt;</span></code></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>The &lt;strong&gt; element is for content that is of greater importance, while the &lt;b&gt; element is used to draw attention to text without indicating that it's more important. They both will look the same but from syntax perspective they are entirely different.</p>
-<p>&lt;strong&gt; should be used preferentially because for users with impaired vision their screen reader will read something in a &lt;strong&gt; tag with different emphasis. Same thing for &lt;em&gt; and &lt;i&gt; tags, both will italicise the text on the screen but &lt;em&gt; will result in screen readers literally putting more emphasis on the text within the tag. So from what I understand, it's all about trying to be inclusive.</p>
+<p>The &lt;strong&gt; element is for content that is of greater importance, while the &lt;b&gt; element is used to draw attention to text without indicating that it’s more important. They both will look the same but from syntax perspective they are entirely different.</p>
+<p>&lt;strong&gt; should be used preferentially because for users with impaired vision their screen reader will read something in a &lt;strong&gt; tag with different emphasis. Same thing for &lt;em&gt; and &lt;i&gt; tags, both will italicise the text on the screen but &lt;em&gt; will result in screen readers literally putting more emphasis on the text within the tag. So from what I understand, it’s all about trying to be inclusive.</p>
 <p>Tags such as &lt;b&gt;, &lt;i&gt;, and &lt;u&gt; do not convey any semantic meaning or importance to the text. They are used solely for visual presentation. Whereas tags like &lt;strong&gt;, &lt;em&gt;, &lt;ins&gt;, &lt;del&gt; indicate semantically changed meaning to the text.</p>
 <p>&lt;strong&gt; and &lt;em&gt; can be called <span class="raw-html"><strong>Semantic formatting tags</strong></span>.</p>
 </div>
 </section>
 <section id="div">
-<h2><span class="section-number">1.2. </span>div<a class="headerlink" href="#div" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">1.2. </span>div<a class="headerlink" href="#div" title="此标题的永久链接" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#div'">¶</a></h2>
 <p>在 HTML 中，&lt;div&gt; 标签是一个通用的块级容器元素，用于将内容分组或组织成不同的部分。它本身没有任何特定的视觉效果，但可以通过 CSS 样式进行控制。&lt;div&gt; 常用于布局、结构化页面和组织内容。</p>
 <p><strong>基本用法</strong></p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="cm">&lt;!-- 这里是要分组的内容 --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是另一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="line-2">    <span class="cm">&lt;!-- 这里是要分组的内容 --&gt;</span>
+</span><span id="line-3">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-4">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是另一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-5"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
 <p><strong>配合 CSS 使用</strong></p>
 <p>&lt;div&gt; 通常与 CSS 结合使用，以控制它的外观、布局和行为。</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>带有样式的段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+</span><span id="line-2">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>带有样式的段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-3"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置背景颜色 */</span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w">               </span><span class="c">/* 设置内边距 */</span>
-<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span><span class="w">      </span><span class="c">/* 设置边框 */</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+</span><span id="line-2"><span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置背景颜色 */</span>
+</span><span id="line-3"><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w">               </span><span class="c">/* 设置内边距 */</span>
+</span><span id="line-4"><span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span><span class="w">      </span><span class="c">/* 设置边框 */</span>
+</span><span id="line-5"><span class="p">}</span>
+</span></code></pre></div>
 </div>
 <p><strong>使用场景</strong></p>
 <ol class="arabic simple">
@@ -191,178 +255,178 @@
 </div></blockquote>
 </section>
 <section id="table">
-<h2><span class="section-number">1.3. </span>Table<a class="headerlink" href="#table" title="此标题的永久链接">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">thead</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;...&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;...&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-    <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-  <span class="o">&lt;/</span><span class="n">thead</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">tbody</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;...&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;...&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-    <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-  <span class="o">&lt;/</span><span class="n">tbody</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
-</pre></div>
+<h2><span class="section-number">1.3. </span>Table<a class="headerlink" href="#table" title="此标题的永久链接" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#table'">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+</span><span id="line-2">  <span class="o">&lt;</span><span class="n">thead</span><span class="o">&gt;</span>
+</span><span id="line-3">    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+</span><span id="line-4">      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;...&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+</span><span id="line-5">      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;...&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+</span><span id="line-6">    <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+</span><span id="line-7">  <span class="o">&lt;/</span><span class="n">thead</span><span class="o">&gt;</span>
+</span><span id="line-8">  <span class="o">&lt;</span><span class="n">tbody</span><span class="o">&gt;</span>
+</span><span id="line-9">    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+</span><span id="line-10">      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;...&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+</span><span id="line-11">      <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;...&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+</span><span id="line-12">    <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+</span><span id="line-13">  <span class="o">&lt;/</span><span class="n">tbody</span><span class="o">&gt;</span>
+</span><span id="line-14"><span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</span></code></pre></div>
 </div>
-<p>table---</p>
+<p>table—</p>
 <blockquote>
-<div><p>attribute: width='' deprecated.应使用 CSS 设置样式</p>
+<div><p>attribute: width=’’ deprecated.应使用 CSS 设置样式</p>
 </div></blockquote>
-<p>tr---table row</p>
-<p>td---table cell data</p>
+<p>tr—table row</p>
+<p>td—table cell data</p>
 <blockquote>
-<div><p>attribute: colspan='' 合并单元格</p>
+<div><p>attribute: colspan=’’ 合并单元格</p>
 </div></blockquote>
-<p>th---table headding</p>
+<p>th—table headding</p>
 <blockquote>
-<div><p>attribute: scope='col'/'row' 指定该表头用于行还是列</p>
+<div><p>attribute: scope=’col’/’row’ 指定该表头用于行还是列</p>
 </div></blockquote>
 </section>
 <section id="form">
-<h2><span class="section-number">1.4. </span>form<a class="headerlink" href="#form" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">1.4. </span>form<a class="headerlink" href="#form" title="此标题的永久链接" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#form'">¶</a></h2>
 <p>We can think of the internet as a network of computers which send and receive information. Computers need an HTTP request to know how to communicate. The HTTP request instructs the receiving computer how to handle the incoming information.</p>
 <p>The &lt;form&gt; element is a great tool for collecting information, but then we need to send that information somewhere else for processing. We need to supply the &lt;form&gt; element with both the location of where the &lt;form&gt;‘s information goes and what HTTP request to make. Take a look at the sample &lt;form&gt; below:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/example.html&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#39;login&#39;</span><span class="p">&gt;</span>登录<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;text&#39;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;username&#39;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#39;张三&#39;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;login&#39;</span><span class="p">&gt;</span>
-
-
-  <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;&#39;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">&gt;</span>xxxx<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-
-  <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;&#39;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;&#39;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#39;&#39;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&#39;&#39;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</pre></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"/example.html"</span> <span class="na">method</span><span class="o">=</span><span class="s">"POST"</span><span class="p">&gt;</span>
+</span><span id="line-2">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="line-3">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-4">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">'login'</span><span class="p">&gt;</span>登录<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span id="line-5">  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span><span id="line-6">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">'text'</span> <span class="na">name</span><span class="o">=</span><span class="s">'username'</span> <span class="na">value</span><span class="o">=</span><span class="s">'张三'</span> <span class="na">id</span><span class="o">=</span><span class="s">'login'</span><span class="p">&gt;</span>
+</span><span id="line-7">
+</span><span id="line-8">
+</span><span id="line-9">  <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">''</span> <span class="na">name</span><span class="o">=</span><span class="s">''</span><span class="p">&gt;</span>
+</span><span id="line-10">    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">''</span><span class="p">&gt;</span>xxxx<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span id="line-11">  <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span><span id="line-12">
+</span><span id="line-13">  <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">id</span><span class="o">=</span><span class="s">''</span> <span class="na">name</span><span class="o">=</span><span class="s">''</span> <span class="na">rows</span><span class="o">=</span><span class="s">''</span> <span class="na">cols</span><span class="o">=</span><span class="s">''</span> <span class="na">value</span><span class="o">=</span><span class="s">''</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span><span id="line-14"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
-<p>form---</p>
+<p>form—</p>
 <blockquote>
 <div><p>attributes:</p>
 <blockquote>
-<div><p>action--determines where the information is sent.</p>
-<p>method--is assigned a HTTP verb that is included in the HTTP request. It does not need to be capitalized.</p>
+<div><p>action–determines where the information is sent.</p>
+<p>method–is assigned a HTTP verb that is included in the HTTP request. It does not need to be capitalized.</p>
 </div></blockquote>
 </div></blockquote>
-<p>label---</p>
+<p>label—</p>
 <blockquote>
-<div><p>attribute: for--用于匹配 input 元素中的 id。</p>
+<div><p>attribute: for–用于匹配 input 元素中的 id。</p>
 </div></blockquote>
-<p>input--- 是闭合标签！！</p>
+<p>input— 是闭合标签！！</p>
 <blockquote>
 <div><p>attributes:</p>
 <blockquote>
-<div><p>type--determines how it renders on the web page and what kind of data it accepts. Default is 'text'.</p>
+<div><p>type–determines how it renders on the web page and what kind of data it accepts. Default is ‘text’.</p>
 <blockquote>
 <div><p>type-text, password, number, range, checkbox, radio, submit</p>
 </div></blockquote>
-<p>name--the name of the input information. The user-typed info is paired with 'name' value, and they are sent when the form is submitted.</p>
-<p>value--assign a default value so that users have a pre-filled text field.</p>
-<p>id--for use in label element</p>
-<p>step--用于 number 或 range type，显示数字增减按钮或增减大小。</p>
-<p>min--用于 range type</p>
-<p>max--用于 range type</p>
-<p>list--用于 datalist 元素，其值应为 datalist 元素中 id 参数的值</p>
-<p>required--不需要设置值，表示必填窗口项。</p>
-<p>minlength--输入的最少字数要求</p>
-<p>maxlength--输入的最大字数要求</p>
-<p>pattern--设置正则表达式，规定输入的要求（如需要设置输入14-16位银行卡号，则 pattern='[0-9]{14,16}'）</p>
-<p>在上述代码块示例中，张三为预先填好的信息，提交表格时会将 'username=张三' 提交给服务器。</p>
+<p>name–the name of the input information. The user-typed info is paired with ‘name’ value, and they are sent when the form is submitted.</p>
+<p>value–assign a default value so that users have a pre-filled text field.</p>
+<p>id–for use in label element</p>
+<p>step–用于 number 或 range type，显示数字增减按钮或增减大小。</p>
+<p>min–用于 range type</p>
+<p>max–用于 range type</p>
+<p>list–用于 datalist 元素，其值应为 datalist 元素中 id 参数的值</p>
+<p>required–不需要设置值，表示必填窗口项。</p>
+<p>minlength–输入的最少字数要求</p>
+<p>maxlength–输入的最大字数要求</p>
+<p>pattern–设置正则表达式，规定输入的要求（如需要设置输入14-16位银行卡号，则 pattern=’[0-9]{14,16}’）</p>
+<p>在上述代码块示例中，张三为预先填好的信息，提交表格时会将 ‘username=张三’ 提交给服务器。</p>
 </div></blockquote>
 </div></blockquote>
-<p>select--- 用于下拉列表选择</p>
+<p>select— 用于下拉列表选择</p>
 <blockquote>
 <div><p>attributes:</p>
 <blockquote>
-<div><p>id-- 用于 label 元素</p>
-<p>name-- 用于表格提交</p>
+<div><p>id– 用于 label 元素</p>
+<p>name– 用于表格提交</p>
 </div></blockquote>
 </div></blockquote>
-<p>datalist--- 用于可以输入查找的下拉列表选择</p>
+<p>datalist— 用于可以输入查找的下拉列表选择</p>
 <blockquote>
-<div><p>attribute: id-- 用于匹配 input 元素中的 list</p>
+<div><p>attribute: id– 用于匹配 input 元素中的 list</p>
 <p>datalist 元素中的 option 中间不用加文字，因为是需要用户输入并匹配选项。而 select 元素中的 option 子元素中间需要加文字，因为其是需要用户下拉选择选项。</p>
 </div></blockquote>
-<p>option---</p>
+<p>option—</p>
 <blockquote>
-<div><p>attribute: value--用于表格提交</p>
+<div><p>attribute: value–用于表格提交</p>
 </div></blockquote>
-<p>textarea--- 用于长文本框（填写意见/投诉等）</p>
+<p>textarea— 用于长文本框（填写意见/投诉等）</p>
 </section>
 <section id="form-validation">
-<h2><span class="section-number">1.5. </span>Form Validation<a class="headerlink" href="#form-validation" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">1.5. </span>Form Validation<a class="headerlink" href="#form-validation" title="此标题的永久链接" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#form-validation'">¶</a></h2>
 <p>Validation is the concept of checking user provided date against the required data.</p>
 <p>server-side validation：数据传至服务器进行验证（如用户登录）</p>
 <p>client-side validation：在浏览器（客户端）检查数据，发生于数据传输至服务器之前。</p>
 <p>不同浏览器都共用 HTML5 内置的客户端验证。</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>xxxx<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;&#39;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;&#39;</span> <span class="na">controls</span> <span class="na">autoplay</span> <span class="na">loop</span><span class="p">&gt;</span>Video Not Supported<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
-</pre></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span><span id="line-2">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">''</span><span class="p">&gt;</span>
+</span><span id="line-3">  <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>xxxx<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span><span id="line-4"><span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span><span id="line-5">
+</span><span id="line-6"><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
+</span><span id="line-7">  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">''</span> <span class="na">type</span><span class="o">=</span><span class="s">''</span><span class="p">&gt;</span>
+</span><span id="line-8"><span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+</span><span id="line-9">
+</span><span id="line-10"><span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">''</span> <span class="na">controls</span> <span class="na">autoplay</span> <span class="na">loop</span><span class="p">&gt;</span>Video Not Supported<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Navigational Links<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#home&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#posts&quot;</span><span class="p">&gt;</span>Posts<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#contact&quot;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Facts About Dogs<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-          Dogs have a sense of time. It&#39;s been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
-          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
-          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg&quot;</span><span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>A cute dog.<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;audio/mp3&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4&quot;</span> <span class="na">controls</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">embed</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif&quot;</span><span class="p">/&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contact me at +1 234 567 8910 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
-
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</pre></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="line-2"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="line-3">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="line-4">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+</span><span id="line-5">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="line-6">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="line-7">    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span><span id="line-8">      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Navigational Links<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="line-9">      <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span><span id="line-10">        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="line-11">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#home"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-12">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#posts"</span><span class="p">&gt;</span>Posts<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-13">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#contact"</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="line-14">        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="line-15">      <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span><span id="line-16">    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span><span id="line-17">
+</span><span id="line-18">    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="line-19">      <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+</span><span id="line-20">        <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+</span><span id="line-21">          <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Facts About Dogs<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="line-22">          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-23">          Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+</span><span id="line-24">          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-25">        <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span><span id="line-26">        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+</span><span id="line-27">          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
+</span><span id="line-28">          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-29">        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+</span><span id="line-30">      <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</span><span id="line-31">      <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span><span id="line-32">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"</span><span class="p">/&gt;</span>
+</span><span id="line-33">        <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>A cute dog.<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span><span id="line-34">      <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span><span id="line-35">      <span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
+</span><span id="line-36">        <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3"</span> <span class="na">type</span><span class="o">=</span><span class="s">"audio/mp3"</span><span class="p">&gt;</span>
+</span><span id="line-37">      <span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+</span><span id="line-38">      <span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4"</span> <span class="na">controls</span><span class="p">&gt;</span>
+</span><span id="line-39">      <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</span><span id="line-40">      <span class="p">&lt;</span><span class="nt">embed</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"</span><span class="p">/&gt;</span>
+</span><span id="line-41">
+</span><span id="line-42">    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="line-43">
+</span><span id="line-44">    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span><span id="line-45">      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contact me at +1 234 567 8910 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="line-46">    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span><span id="line-47">
+</span><span id="line-48">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="line-49"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
 <ul class="simple">
 <li><p>Semantic HTML introduces meaning to a page through specific elements that provide context as to what is in between the tags.</p></li>
@@ -375,93 +439,99 @@
 <li><p>&lt;figcaption&gt; is used to describe the media in &lt;figure&gt;.</p></li>
 <li><p>&lt;video&gt;, &lt;embed&gt;, and &lt;audio&gt; elements are used for media files.</p></li>
 </ul>
+<div class="admonition danger">
+<p class="admonition-title">危险</p>
+<p>xxxx</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">错误</p>
+<p>xxxx</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>xxxx</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">小心</p>
+<p>xxxx</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>xxxx</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>xxxx</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>xxxx</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>xxxx</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>xxxx</p>
+</div>
+<div class="admonition-xxx admonition">
+<p class="admonition-title">xxx</p>
+<p>xxxx</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>xxxx</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<ol class="arabic simple">
+<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoabcdefghijkl laboris nisi ut aliquip</p></li>
+<li><p><a class="reference external" href="https://www.amazon.com/s?k=high+end+speakers&amp;crid=1N7I9DZEJL9QJ&amp;sprefix=highend+speakers%2Caps%2C522&amp;ref=nb_sb_ss_ts-doa-p_1_16">https://www.amazon.com/s?k=high+end+speakers&amp;crid=1N7I9DZEJL9QJ&amp;sprefix=highend+speakers%2Caps%2C522&amp;ref=nb_sb_ss_ts-doa-p_1_16</a></p></li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>WARNING: Notebook exception traceback saved in:</p>
+<p>/Users/abcdefghijklmnopqrs/Desktop/PY_PY/py_py_vnv/proj_py_dream/build/html/reports/blame_it_on_rio/imageAI.err.log [mystnb.exec]</p>
+<p>WARNING: Notebook exception traceback saved in:</p>
+<p>/Users/abcdefghijklmnopqrs/abcdefgh/Desktop/PY_PY/py_py_vnv/proj_py_dream/build/html/reports/blame_it_on_rio/imageAI.err.log [mystnb.exec]</p>
+</div>
+<ol class="arabic simple">
+<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoabcdefghijkl laboris nisi ut aliquip</p></li>
+<li><p><a class="reference external" href="https://www.amazon.com/s?k=high+end+speakers&amp;crid=1N7I9DZEJL9QJ&amp;sprefix=highend+speakers%2Caps%2C522&amp;ref=nb_sb_ss_ts-doa-p_1_16">https://www.amazon.com/s?k=high+end+speakers&amp;crid=1N7I9DZEJL9QJ&amp;sprefix=highend+speakers%2Caps%2C522&amp;ref=nb_sb_ss_ts-doa-p_1_16</a></p></li>
+</ol>
+<p>Notebook exception traceback saved in:</p>
+<p>/Users/abcdefghijklmnopqrs/Desktop/PY_PY/py_py_vnv/proj_py_dream/build/html/reports/blame_it_on_rio/imageAI.err.log [mystnb.exec]</p>
+<p>WARNING: Notebook exception traceback saved in:</p>
+<p>/Users/abcdefghijklmnopqrs/abcdefgh/Desktop/PY_PY/py_py_vnv/proj_py_dream/build/html/reports/blame_it_on_rio/imageAI.err.log [mystnb.exec]</p>
 </section>
-<section id="css">
-<h2><span class="section-number">1.6. </span>CSS<a class="headerlink" href="#css" title="此标题的永久链接">¶</a></h2>
-<p>selector + declaration block + declaration + property + value</p>
-<figure class="align-center" id="id4">
-<img alt="_images/css_anatomy.jpg" src="_images/css_anatomy.jpg" />
-<figcaption>
-<p><span class="caption-number">图 1.2 </span><span class="caption-text">CSS Anatomy</span><a class="headerlink" href="#id4" title="此图像的永久链接">¶</a></p>
-</figcaption>
-</figure>
 </section>
-</section>
-
-
-          </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">学习笔记</a></h1>
-
-
-
-
-
-
-
-
-<h3>导航</h3>
-<p class="caption" role="heading"><span class="caption-text">目录</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. HTML</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#text-formatting">1.1. Text Formatting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#div">1.2. div</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#table">1.3. Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#form">1.4. form</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#form-validation">1.5. Form Validation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#css">1.6. CSS</a></li>
-</ul>
-</li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
 <ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="上一章">个人学习笔记</a></li>
-  </ul></li>
+<li><a :data-current="activeSection === '#text-formatting'" class="reference internal" href="#text-formatting">1.1. Text Formatting</a></li>
+<li><a :data-current="activeSection === '#div'" class="reference internal" href="#div">1.2. div</a></li>
+<li><a :data-current="activeSection === '#table'" class="reference internal" href="#table">1.3. Table</a></li>
+<li><a :data-current="activeSection === '#form'" class="reference internal" href="#form">1.4. form</a></li>
+<li><a :data-current="activeSection === '#form-validation'" class="reference internal" href="#form-validation">1.5. Form Validation</a></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="提交" />
-    </form>
-    </div>
+</aside>
+</main>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;Wang Shun.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
-      
-      |
-      <a href="_sources/html.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
+</div><footer class="py-6 border-t border-border md:py-0">
+<div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+<div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© Wang Shun Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.1.2</a></p>
+</div>
+</div>
+</footer>
+</div>
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=a9600ec2"></script>
+<script src="_static/doctools.js?v=888ff710"></script>
+<script src="_static/sphinx_highlight.js?v=4825356b"></script>
+<script defer="defer" src="_static/theme.js?v=073f68d9"></script>
+<script src="_static/translations.js?v=beaddf03"></script>
+</body>
 </html>

@@ -403,15 +403,80 @@ client-side validation：在浏览器（客户端）检查数据，发生于数�
 
 - <video>, <embed>, and <audio> elements are used for media files.
 
-CSS
-------
 
-selector + declaration block + declaration + property + value
+.. danger::
 
-.. figure:: media/css_anatomy.jpg
-   :align: center
-   
-   CSS Anatomy
+   xxxx
+
+.. error::
+
+   xxxx
+
+.. warning::
+
+   xxxx
+
+.. caution::
+
+   xxxx
+
+.. attention::
+
+   xxxx
+
+.. important::
+
+   xxxx
+
+.. note::
+
+   xxxx
+
+.. hint::
+
+   xxxx
+
+.. tip::
+
+   xxxx
+
+.. admonition:: xxx
+
+   xxxx
+
+.. seealso::
+
+   xxxx
+
+.. warning::
+
+   #. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoabcdefghijkl laboris nisi ut aliquip
+
+   #. https://www.amazon.com/s?k=high+end+speakers&crid=1N7I9DZEJL9QJ&sprefix=highend+speakers%2Caps%2C522&ref=nb_sb_ss_ts-doa-p_1_16
+
+
+.. warning::
+
+   WARNING: Notebook exception traceback saved in: 
+
+   /Users/abcdefghijklmnopqrs/Desktop/PY_PY/py_py_vnv/proj_py_dream/build/html/reports/blame_it_on_rio/imageAI.err.log [mystnb.exec]
+
+   WARNING: Notebook exception traceback saved in: 
+
+   /Users/abcdefghijklmnopqrs/abcdefgh/Desktop/PY_PY/py_py_vnv/proj_py_dream/build/html/reports/blame_it_on_rio/imageAI.err.log [mystnb.exec]
+
+
+#. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoabcdefghijkl laboris nisi ut aliquip
+
+#. https://www.amazon.com/s?k=high+end+speakers&crid=1N7I9DZEJL9QJ&sprefix=highend+speakers%2Caps%2C522&ref=nb_sb_ss_ts-doa-p_1_16
+
+Notebook exception traceback saved in: 
+
+/Users/abcdefghijklmnopqrs/Desktop/PY_PY/py_py_vnv/proj_py_dream/build/html/reports/blame_it_on_rio/imageAI.err.log [mystnb.exec]
+
+WARNING: Notebook exception traceback saved in: 
+
+/Users/abcdefghijklmnopqrs/abcdefgh/Desktop/PY_PY/py_py_vnv/proj_py_dream/build/html/reports/blame_it_on_rio/imageAI.err.log [mystnb.exec]
 
 
 
